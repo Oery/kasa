@@ -1,6 +1,5 @@
 import BaseLayout from "../layouts/BaseLayout";
-import { useParams } from "react-router-dom";
-import ErrorNotFoundPage from "./ErrorNotFoundPage";
+import { useParams, Navigate } from "react-router-dom";
 import logements from "../data/logements.json";
 import "../styles/logement.sass";
 import Tags from "../components/Tags";
@@ -11,11 +10,10 @@ import Collapse from "../components/Collapse";
 
 function LogementPage() {
     let { id } = useParams();
-
     const logement = logements.find((logement) => logement.id === id);
 
     if (!logement) {
-        return <ErrorNotFoundPage />;
+        return <Navigate to="/error" replace={true} />;
     }
 
     const {
