@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import ErrorNotFoundPage from "./ErrorNotFoundPage";
 import logements from "../data/logements.json";
 import "../styles/logement.sass";
+import Tags from "../components/Tags";
 import Carrousel from "../components/Carrousel";
 
 function LogementPage() {
@@ -33,6 +34,7 @@ function LogementPage() {
                     <div>
                         <h1 className="title">{title}</h1>
                         <h6 className="location">{location}</h6>
+                        <Tags tags={tags} />
                     </div>
                     <aside>
                     </aside>
