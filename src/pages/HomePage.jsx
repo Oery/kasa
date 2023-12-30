@@ -4,7 +4,7 @@ import "../styles/global.sass";
 import "../styles/home.sass";
 
 import logements from "../data/logements.json";
-import Thumbnail from "../components/Thumbnail";
+import Card from "../components/Card";
 
 function HomePage() {
     return (
@@ -17,7 +17,7 @@ function HomePage() {
 
             <div className="logements-grid">
                 {logements.map((logement) => (
-                    <Thumbnail logement={logement} key={logement.id} />
+                    <Card logement={logement} key={logement.id} />
                 ))}
             </div>
         </BaseLayout>
