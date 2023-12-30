@@ -1,0 +1,72 @@
+@import _variables
+    
+.logement
+
+    .info, .more-info
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+
+    .more-info
+        gap: 76px
+        padding-bottom: 50px
+
+    .title
+        padding-top: 30px
+        font-size: 36px
+        font-weight: 500
+
+    .location
+        padding-top: 10px
+        font-size: 18px
+        font-weight: 500
+
+    .tags
+        padding-top: 20px
+        padding-bottom: 24px
+
+    .host
+        padding-top: 24px
+
+    .rating
+        padding-top: 21px
+
+@media screen and (max-width: $mobile-breakpoint)
+    .logement
+        .info, .more-info
+            flex-direction: column
+            gap: 16px
+
+        .more-info
+            padding-bottom: 27px
+            gap: 20px
+
+        .title
+            padding-top: 15px
+            font-size: 18px
+
+        .location
+            padding-top: 5px
+            font-size: 14px
+
+        .tags
+            padding-top: 10px
+            padding-bottom: 0px
+
+        .host
+            padding-top: 0px
+
+        aside
+            display: flex
+            flex-direction: row-reverse
+            align-items: center
+            justify-content: space-between
+            padding-bottom: 13px
+
+        .rating
+            padding-top: 0px
+
+            svg
+                height: 18px
+                width: 18px
+
