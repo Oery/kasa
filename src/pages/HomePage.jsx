@@ -2,6 +2,9 @@ import BaseLayout from "../layouts/BaseLayout";
 import Banner from "../components/Banner";
 import "../styles/global.sass";
 
+import logements from "../data/logements.json";
+import Thumbnail from "../components/Thumbnail";
+
 function HomePage() {
     return (
         <BaseLayout>
@@ -10,8 +13,12 @@ function HomePage() {
                 imageUrl={"/home_banner.jpg"}
                 imageAlt={"Falaises et forêt sur un littoral brumeux."}
             />
-            <h1>Home</h1>
-            <p>This is the home page</p>
+
+            <div className="logements-grid">
+                {logements.map((logement) => (
+                    <Thumbnail logement={logement} key={logement.id} />
+                ))}
+            </div>
         </BaseLayout>
     );
 }
