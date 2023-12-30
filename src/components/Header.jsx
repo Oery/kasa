@@ -1,9 +1,9 @@
-import { Link } from "react-router-dom";
+import Logo from "./Logo";
 
 export default function Header() {
     return (
         <header>
-            <img src="" alt="Logo de Kasa" />
+            <Logo color="#FF6060" />
             <nav>
                 <ul>
                     <li>
