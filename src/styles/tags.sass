@@ -1,0 +1,19 @@
+@import _variables
+
+.tags
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    gap: 10px
+    
+.tag
+    padding: 3px 22px
+    background: $primary-color
+    color: #fff
+    border-radius: 10px
+    min-width: 115px
+    text-align: center
+
+@media screen and (max-width: $mobile-breakpoint)
+    .tag
+        font-size: 10px
