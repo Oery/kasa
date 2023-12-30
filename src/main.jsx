@@ -1,6 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+    createBrowserRouter,
+    RouterProvider,
+    Navigate,
+} from "react-router-dom";
 import AboutPage from "./pages/AboutPage";
 import ErrorNotFoundPage from "./pages/ErrorNotFoundPage";
 import HomePage from "./pages/HomePage";
@@ -20,8 +24,12 @@ const router = createBrowserRouter([
         element: <LogementPage />,
     },
     {
-        path: "*",
+        path: "/error",
         element: <ErrorNotFoundPage />,
+    },
+    {
+        path: "*",
+        element: <Navigate to="/error" replace={true} />,
     },
 ]);
 
