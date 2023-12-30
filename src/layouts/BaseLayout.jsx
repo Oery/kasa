@@ -1,4 +1,6 @@
 import Header from "../components/Header";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 function BaseLayout(props) {
     const { pathname } = useLocation();
