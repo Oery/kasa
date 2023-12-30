@@ -1,3 +1,4 @@
+import Footer from "../components/Footer";
 import Header from "../components/Header";
 import PropTypes from "prop-types";
 import { useEffect } from "react";
@@ -24,6 +25,7 @@ function BaseLayout(props) {
         <>
             <Header />
             <main>{props.children}</main>
+            <Footer />
         </>
     );
 }
