@@ -7,7 +7,6 @@ import Tags from "../components/Tags";
 import Carrousel from "../components/Carrousel";
 import Host from "../components/Host";
 import Rating from "../components/Rating";
-import Collapse from "../components/Collapse";
 
 function LogementPage() {
     let { id } = useParams();
