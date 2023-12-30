@@ -6,9 +6,9 @@ function HomePage() {
     return (
         <BaseLayout>
             <Banner
-                text={"test"}
-                imageUrl={""}
-                imageAlt={"test de description"}
+                text={"Chez vous, partout et ailleurs"}
+                imageUrl={"/home_banner.jpg"}
+                imageAlt={"Falaises et forêt sur un littoral brumeux."}
             />
             <h1>Home</h1>
             <p>This is the home page</p>
