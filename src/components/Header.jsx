@@ -1,4 +1,5 @@
 import Logo from "./Logo";
+import "../styles/header.sass";
 
 export default function Header() {
     return (

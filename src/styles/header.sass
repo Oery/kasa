@@ -1,0 +1,41 @@
+@import _variables
+    
+header
+    margin-top: 45px
+    margin-bottom: 50px
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    ul
+        display: flex
+        flex-direction: row
+        align-items: center
+        gap: 57px
+
+    li
+        list-style: none
+
+        a
+            text-decoration: none
+            font-size: 24px
+            font-style: normal
+            font-weight: 500
+
+            &:hover
+                text-decoration: underline
+
+        .active
+            text-decoration: underline
+
+@media screen and (max-width: $mobile-breakpoint)
+    header
+        margin: 0
+
+        ul
+            gap: 26px
+
+        li
+            a
+                font-size: 12px
+                text-transform: uppercase
