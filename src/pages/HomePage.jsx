@@ -10,9 +10,9 @@ function HomePage() {
     return (
         <BaseLayout>
             <Banner
-                text={"Chez vous, partout et ailleurs"}
-                imageUrl={"/home_banner.jpg"}
-                imageAlt={"Falaises et forêt sur un littoral brumeux."}
+                text="Chez vous, partout et ailleurs"
+                imageUrl="/home_banner.jpg"
+                imageAlt="Falaises et forêt sur un littoral brumeux."
             />
 
             <div className="logements-grid">
