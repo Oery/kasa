@@ -1,0 +1,35 @@
+@import _variables
+    
+.thumbnail
+    // width: 340px
+    height: 340px
+    position: relative
+
+    .filter
+        width: 100%
+        height: 100%
+        position: absolute
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0.50) 100%)
+        border-radius: 10px
+
+    img
+        display: block
+        width: 100%
+        height: 100%
+        object-fit: cover
+        border-radius: 10px
+
+    h2
+        color: #fff
+        left: 20px
+        bottom: 20px
+        width: calc(100% - 40px)
+        position: absolute
+        font-size: 18px
+        font-style: normal
+        font-weight: 500
+
+@media screen and (max-width: $mobile-breakpoint)
+    .thumbnail
+        height: 255px
+
