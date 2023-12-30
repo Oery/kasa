@@ -7,6 +7,7 @@ import Tags from "../components/Tags";
 import Carrousel from "../components/Carrousel";
 import Host from "../components/Host";
 import Rating from "../components/Rating";
+import Collapse from "../components/Collapse";
 
 function LogementPage() {
     let { id } = useParams();
@@ -44,6 +45,12 @@ function LogementPage() {
                     </aside>
                 </div>
                 <div className="more-info">
+                    <Collapse title="Description">{description}</Collapse>
+                    <Collapse title="Equipements">
+                        {equipments.map((equipment) => (
+                            <div key={equipment}>{equipment}</div>
+                        ))}
+                    </Collapse>
                 </div>
             </div>
         </BaseLayout>
