@@ -5,6 +5,8 @@ import logements from "../data/logements.json";
 import "../styles/logement.sass";
 import Tags from "../components/Tags";
 import Carrousel from "../components/Carrousel";
+import Host from "../components/Host";
+import Rating from "../components/Rating";
 
 function LogementPage() {
     let { id } = useParams();
@@ -37,6 +39,8 @@ function LogementPage() {
                         <Tags tags={tags} />
                     </div>
                     <aside>
+                        <Host host={host} />
+                        <Rating rating={rating} />
                     </aside>
                 </div>
                 <div className="more-info">
