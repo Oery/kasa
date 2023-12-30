@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import ErrorNotFoundPage from "./ErrorNotFoundPage";
 import logements from "../data/logements.json";
 import "../styles/logement.sass";
+import Carrousel from "../components/Carrousel";
 
 function LogementPage() {
     let { id } = useParams();
@@ -27,6 +28,7 @@ function LogementPage() {
     return (
         <BaseLayout>
             <div className="logement">
+                <Carrousel images={pictures} />
                 <div className="info">
                     <div>
                         <h1 className="title">{title}</h1>
