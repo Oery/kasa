@@ -1,0 +1,21 @@
+@import _variables
+    
+.logements-grid
+    margin-top: 43px
+    margin-bottom: 50px
+    width: 100%
+    background-color: #F6F6F6
+    border-radius: 25px
+    padding: 50px
+
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
+    gap: 50px
+
+@media screen and (max-width: $mobile-breakpoint)
+    .logements-grid
+        margin-top: 22px
+        margin-bottom: 27px
+        padding: 0
+        background: none
+        gap: 20px

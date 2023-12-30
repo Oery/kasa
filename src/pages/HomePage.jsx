@@ -1,6 +1,7 @@
 import BaseLayout from "../layouts/BaseLayout";
 import Banner from "../components/Banner";
 import "../styles/global.sass";
+import "../styles/home.sass";
 
 import logements from "../data/logements.json";
 import Thumbnail from "../components/Thumbnail";
