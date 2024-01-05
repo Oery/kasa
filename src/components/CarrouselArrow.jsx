@@ -2,7 +2,7 @@ import { PropTypes } from "prop-types";
 
 CarrouselArrow.propTypes = {
     handleClick: PropTypes.func.isRequired,
-    direction: PropTypes.string.isRequired,
+    direction: PropTypes.oneOf(["left", "right"]).isRequired,
 };
 
 export default function CarrouselArrow({ handleClick, direction }) {
