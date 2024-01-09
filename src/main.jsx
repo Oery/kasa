@@ -10,6 +10,8 @@ import ErrorNotFoundPage from "./pages/ErrorNotFoundPage";
 import HomePage from "./pages/HomePage";
 import LogementPage from "./pages/LogementPage";
 
+const isDev = import.meta.env.MODE === "development";
+
 const router = createBrowserRouter([
     {
         path: "/",
@@ -34,7 +36,11 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-    <React.StrictMode>
+    isDev ? (
+        <React.StrictMode>
+            <RouterProvider router={router} />
+        </React.StrictMode>
+    ) : (
         <RouterProvider router={router} />
-    </React.StrictMode>
+    )
 );
