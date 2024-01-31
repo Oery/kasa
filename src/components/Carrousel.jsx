@@ -11,35 +11,26 @@ function Carrousel({ images }) {
     const [index, setIndex] = useState(0);
 
     const handleNext = () => {
-        if (index === images.length - 1) {
-            setIndex(0);
-        } else {
-            setIndex(index + 1);
-        }
+        setIndex((index + 1) % images.length);
     };
 
     const handlePrev = () => {
-        if (index === 0) {
-            setIndex(images.length - 1);
-        } else {
-            setIndex(index - 1);
-        }
+        setIndex((index - 1 + images.length) % images.length);
     };
-
-    if (images.length === 1) {
-        return (
-            <div className="carrousel">
-                <img src={images[0]} alt="" />
-            </div>
-        );
-    }
 
     return (
         <div className="carrousel">
-            <CarrouselArrow handleClick={handlePrev} direction="left" />
-            <CarrouselArrow handleClick={handleNext} direction="right" />
+            {images.length >= 2 && ( // Only show arrows if there are more than 1 image
+                <>
+                    <CarrouselArrow handleClick={handlePrev} direction="left" />
+                    <CarrouselArrow
+                        handleClick={handleNext}
+                        direction="right"
+                    />
+                    <p>{`${index + 1}/${images.length}`}</p>
+                </>
+            )}
             <img src={images[index]} alt="" />
-            <p>{`${index + 1}/${images.length}`}</p>
         </div>
     );
 }
