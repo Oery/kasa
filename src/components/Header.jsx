@@ -5,7 +5,7 @@ import "../styles/header.sass";
 export default function Header() {
     return (
         <header>
-            <Logo color="#FF6060" />
+            <Logo />
             <nav>
                 <ul>
                     <li>
