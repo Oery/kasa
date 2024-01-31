@@ -6,7 +6,7 @@ import "../styles/about.sass";
 function AboutPage() {
     return (
         <BaseLayout>
-            <Banner imageUrl="about_banner.jpg" />
+            <Banner imageUrl="about_banner.jpg" imageAlt="Paysage montagneux" />
 
             <div className="about">
                 <Collapse title="Fiabilité">
